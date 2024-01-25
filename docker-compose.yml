@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:8.0.33
+    environment:
+      MYSQL_ROOT_PASSWORD:
+      MYSQL_DATABASE: tools
+      MYSQL_USER:
+      MYSQL_PASSWORD:
+
+    ports:
+      - "3307:3307"
+
+    volumes:
+      - db_data:/var/lib/mysql
+
+volumes:
+  db_data:
